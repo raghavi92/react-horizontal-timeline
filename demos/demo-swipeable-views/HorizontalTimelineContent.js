@@ -14,11 +14,11 @@ export default class HorizontalTimelineContent extends React.Component {
   }
 
   componentWillMount() {
-    this.dates = this.props.content.map((entry) => entry.date);
+    this.dates = this.props.content.map((entry) => { return {date: entry.date, desc: entry.desc} });
   }
 
   componentWillReceiveProps(nextProps) {
-    this.dates = nextProps.content.map((entry) => entry.date);
+    this.dates = nextProps.content.map((entry) => { return {date: entry.date, desc: entry.desc} });
   }
 
   render() {

@@ -117,7 +117,8 @@ class HorizontalTimeline extends React.Component {
 
   __setUpState__ = (nextProps) => {
     // parsing the dates from all valid formats that the constructor for Date accepts.
-    let dates = nextProps.values.map((value) => new Date(value));
+    let dates = nextProps.values.map((value) => new Date(value.date.date));
+    let descs = nextProps.values.map((value) => value.date.desc);
     // Calculating the minimum seperation between events
     this.eventsMinLapse = __minDistanceEvents__(dates);
 
@@ -143,6 +144,7 @@ class HorizontalTimeline extends React.Component {
       distanceFromOrigin: distances,
       // parsed format of the dates
       timelineDates: dates,
+      timelineDescs: descs,
       // the exact value of the width of the timeline
       totalWidth: Math.max(Constants.MIN_TIMELINE_WIDTH, distances[distances.length - 1] + 100)
     };
@@ -214,6 +216,7 @@ class HorizontalTimeline extends React.Component {
         <TimelineDot
           distanceFromOrigin={this.state.distanceFromOrigin[index]}
           eventDate={this.state.timelineDates[index]}
+          desc={this.state.timelineDescs[index]}
           index={index}
           key={index}
           onClick={this.handleDateClick}

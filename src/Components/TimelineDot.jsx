@@ -62,7 +62,8 @@ const TimelineDot = (props) => (
         dots(props.styles).links,
         { left: props.distanceFromOrigin, cursor: 'pointer', width: Constants.DATE_WIDTH }
       ]} >
-      { props.eventDate.toDateString().substring(4) }
+      <div>{ props.desc }</div>
+      <span>{ props.eventDate.toDateString().substring(4) }</span>
     </a>
     <span style={[
       dots(props.index).base,

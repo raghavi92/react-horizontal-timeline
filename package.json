@@ -1,7 +1,7 @@
 {
-  "name": "react-horizontal-timeline",
-  "version": "0.1.1",
-  "description": "A horizontal timeline component made using react",
+  "name": "react-timeline-view",
+  "version": "0.1.2",
+  "description": "Forked: jckdrpr/react-horizontal-timeline. A horizontal timeline component made using react",
   "main": "./dist/react-horizontal-timeline.js",
   "scripts": {
     "start": "node server.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jckdrpr/react-horizontal-timeline"
+    "url": "https://github.com/arvindkumarc/react-horizontal-timeline"
   },
   "keywords": [
     "react",
@@ -24,12 +24,12 @@
     "react-motion",
     "react-component"
   ],
-  "author": "Sherub Thakur",
+  "author": "Sherub Thakur, Arvind Kumar C",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jckdrpr/react-horizontal-timeline/issues"
+    "url": "https://github.com/arvindkumarc/react-horizontal-timeline/issues"
   },
-  "homepage": "https://github.com/jckdrpr/react-horizontal-timeline",
+  "homepage": "https://github.com/arvindkumarc/react-horizontal-timeline",
   "dependencies": {
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.1",
