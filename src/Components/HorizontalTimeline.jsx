@@ -117,8 +117,8 @@ class HorizontalTimeline extends React.Component {
 
   __setUpState__ = (nextProps) => {
     // parsing the dates from all valid formats that the constructor for Date accepts.
-    let dates = nextProps.values.map((value) => new Date(value.date.date));
-    let descs = nextProps.values.map((value) => value.date.desc);
+    let dates = nextProps.values.map((value) => new Date(value.date));
+    let descs = nextProps.values.map((value) => value.title);
     // Calculating the minimum seperation between events
     this.eventsMinLapse = __minDistanceEvents__(dates);
 
