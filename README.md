@@ -29,7 +29,7 @@ Property	       |	Type   	   |	Default	                    |	Description
 This is how it can be used.
 
 ```
-const VALUES = [ /* The date strings go here */ ];
+const VALUES = [ {date: '10/01/2016', desc: 'Title'}, ... ];
 
 export default class App extends React.Component {
   state = { value: 0, previous: 0 };
