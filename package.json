@@ -1,6 +1,6 @@
 {
   "name": "react-timeline-view",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Forked: jckdrpr/react-horizontal-timeline. A horizontal timeline component made using react",
   "main": "./dist/react-horizontal-timeline.js",
   "scripts": {
