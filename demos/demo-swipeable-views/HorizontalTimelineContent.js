@@ -18,7 +18,7 @@ export default class HorizontalTimelineContent extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.dates = nextProps.content.map((entry) => { return {date: entry.date, title: entry.title} });
+    this.dates = nextProps.content.map((entry, index) => { return {date: entry.date, title: entry.title, index: index } });
   }
 
   render() {
@@ -33,14 +33,14 @@ export default class HorizontalTimelineContent extends React.Component {
     return (
       <div>
         <HorizontalTimeline
-          index={this.state.value}
-          indexClick={(index) => {
-            this.setState({ value: index, previous: this.state.value });
+          index={this.state.value.index}
+          indexClick={(selectedValue) => {
+            this.setState({ value: selectedValue, previous: this.state.value });
           }}
           values={ this.dates } />
         <div className='text-center'>
           <SwipeableViews
-            index={this.state.value}
+            index={this.state.value.index}
             onChangeIndex={(value, previous) => {
               this.setState({ value: value, previous: previous });
             }}

@@ -204,7 +204,7 @@ class HorizontalTimeline extends React.Component {
    * @return {undefind} modifies the state
    */
   handleDateClick = (index) => {
-    this.props.indexClick(index);
+    this.props.indexClick(this.props.values[index]);
     this.__updateFilling__(index);
   };
 
